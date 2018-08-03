@@ -1,0 +1,2 @@
+## What Does the Prohect do?
+The project is a simple calculator that can only handle addition, subtraction, multiplication, division, and exponents. You are able to toggle if you want to reuse your answer. It also records all of your answer in an ordered list and you're able to type a number that would either respond with what result that number is in, or with false
