@@ -39,43 +39,44 @@ function calc() {
 		document.querySelector("#value2").value = "";
 	}
 	
-
-
 	document.querySelector("#equations").innerHTML = equation;
 	document.querySelector("#results").innerHTML = calculate;
 	console.log(calculate);
-	var ol = document.getElementById("list");
+	var ol = $("#list");
 	var result = document.getElementById("results");
-  	var li = document.createElement("li");
+
+	var item = document.createElement("item");
   	
-  	for (var i = 1; i < ol.length; i++) {
-  		ol[i]
-  	}
+  	item.innerHTML = "<b>Result" + " " + (ol.children().length + 1) + ":</b>" + calculate + " ";
 
-  	li.innerHTML = "<b>Result " + i + ":</b> " + calculate; 
-
-  	ol.appendChild(li);
-
+	ol.append(item);
+	
 }
 
-$("#bruteForce").click(function() {
-	debugger;
-	var nlist = document.getElementById("#list");
+$("#bruteForce").click(function(){
+
 	var valueToSearch = $("#bruteForceValue").val();
+	
+	//var ol = $("#list");
+	var ol = $("#list")[0].innerText.split(" ");
+	debugger;
+	var tf;
 
-var tf = "Result"
-for (var i = 0;valueToSearch != nlist[i]; i++) {
-	if ( i == nlist.length) {
-		tf = "No such result";
-		break;
+	for (var i = 0; i < ol.length - 1; i++) {
+
+		if (valueToSearch == ol[i].split(":")[1]) {
+		//if (valueToSearch == ol[0].innerText.split(" ")[i].split(":")[1]) {
+			tf = i;
+			break;
+		}
 	}
-}
+
+	if(tf != undefined)
+	{
+		$("#show").val("Result : " + (tf + 1));
+	}
+	else
+	{
+		$("#show").val(false);	
+	}
 });
-
-
-function clear()  {
-	document.getElementById("#value1").innerHTML = "";
-	document.getElementById("#value2").innerHTML = "";
-	document.getElementById("#results").innerHTML = "";
-	document.getElementById("#equations").innerHTML = "";
-}

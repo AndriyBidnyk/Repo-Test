@@ -4,15 +4,16 @@
 		<font size="+9">Calculator</font>
 		
 	<title>Calculator</title>
-	</head>
+	</head>T
 	<body>
 
-		<form>
 			
+			<div style="position:relative; left: 340px; top: 230px ">Search :<input type="number" id="bruteForceValue"></b><br/>
+			</div>
 			Value 1: <input type="number" id="value1">
-			<br>
+			<br/>
 			Value 2: <input type="number" id="value2">
-			<br>
+			<br/>
 			Operator:
 			<select id="operator">
 				
@@ -24,13 +25,13 @@
 
 			</select>		
 			<button style="position:relative; left: -165px; top: 30px" type="button" onclick="calc()" class="btn" id="Cal">Calculate</button>
-			<br>
+			<br/>
 			
 			<input style="position:relative; left: 241px; top: -68px;" type= size=22" readonly/>
 			
 			<div style="position:relative; left: 255px; top: -97px;" id="results"> </div>
 			
-			<button id="bruteForce" style="position:relative; left: 325px; top: 43px" class="btn">Search</button>
+			<button id="bruteForce" style="position:relative; left: 590px; top: 43px" class="btn">Search</button>
 
 			<div style="position:relative; left: 245px; top: -188px;">Answer:</div>
 
@@ -44,26 +45,27 @@
 
 			<div style="width:200px;height:300px;border:1px solid #000; position:relative; left: 10px; top: -145px "> </div>
 
-			<input style="position:relative; left: 425px; top: -450px " type="number" id="bruteForceValue"></b>
 			
-			<input style="position:relative; left: 241px; top: -369px " type="text" id="show" readonly/>
-
-			<button style="position:relative; left: -182px; top: -517px;" onclick="clear()" class="btn">Reset</button>
-
-			<div style="position:relative; left: 330px; top: -400px ">Result:</div>
-		
-			<div style="position:relative; top: -440px "><ol style="list-style-type: none" id="list">
-  				
-			</ol></div>
 			
-			<p id="bruteForceResult"></p>
+		 	<div style="position:relative; left: 343px; top: -375px ">Result :
+		 		<input type="text" id="show" readonly/>
+		 	</div>
 
-		</form>
+		 	<p style="position:relative; left: 400px; top: -402px" id="bruteForceResult"></p>
+
+			<button style="position:relative; left: 3px; top: -548px; opacity: " class="btn" value="Reset" onClick="window.location.reload()">Reset</button>
+
 
 
 		
-		</body>
+		
+			<div style="position:relative; top: -525px ">
+				<ol style="list-style-type: none" id="list">
+				</ol>
+		</div>
+			
+	</body>
 	<link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
-	<script src="scripts/calculate.js"></script>
 	<script src="scripts/jquery.js"></script>
+	<script src="scripts/calculate.js"></script>
 </html>
